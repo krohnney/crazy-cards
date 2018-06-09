@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "title": "Mr",
+      "firstName": "Ollie",
+      "lastName": "Murphree",
+      "dob": "01/07/1970",
+      "income": 34000,
+      "employmentStatus": "Full Time Employment",
+      "houseNUmber": 700,
+      "postcode": "BS14 9PR"
+    },
+    {
+      "id": 2,
+      "title": "Miss",
+      "firstName": "Elizabeth",
+      "lastName": "Edmundson",
+      "dob": "29/06/1984",
+      "income": 17000,
+      "employmentStatus": "Student",
+      "houseNUmber": 177,
+      "postcode": "PH12 8UW"
+    },
+    {
+      "id": 3,
+      "title": "Mr",
+      "firstName": "Trevor",
+      "lastName": "Rieck",
+      "dob": "07/09/1990",
+      "income": 15000,
+      "employmentStatus": "Part Time Employment",
+      "houseNUmber": 343,
+      "postcode": "TS25 2NF"
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "name": "Student Life Card",
+      "apr": 18.9,
+      "balanceTransferOfferDuration": 0,
+      "purchaseOfferDuration": 6,
+      "credit": 1200
+    },
+    {
+      "id": 2,
+      "name": "Anywhere Card",
+      "apr": 33.9,
+      "balanceTransferOfferDuration": 0,
+      "purchaseOfferDuration": 0,
+      "credit": 300
+    },
+    {
+      "id": 3,
+      "name": "Liquid Card",
+      "apr": 33.9,
+      "balanceTransferOfferDuration": 12,
+      "purchaseOfferDuration": 6,
+      "credit": 3000
+    }
+  ]
+}

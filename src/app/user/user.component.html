@@ -1,0 +1,50 @@
+<div *ngIf="user$ | async as user">
+
+    <div class="navbar navbar-dark bg-dark">
+        <div dropdown class="btn-group">
+            <button dropdownToggle
+                    class="btn btn-primary dropdown-toggle"
+                    type="button">
+                {{ user.firstName + ' ' + user.lastName }}
+            </button>
+            <ul *dropdownMenu class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/user/1" routerLinkActive="active">Ollie Murphree</a></li>
+                <li><a class="dropdown-item" routerLink="/user/2" routerLinkActive="active">Elizabeth Edmundson</a></li>
+                <li><a class="dropdown-item" routerLink="/user/3" routerLinkActive="active">Trevor Rieck</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container pt-5">
+
+        <div class="row">
+            <div class="col-4 border-right" *ngIf="userCards$ | async as cards">
+                <h4>Cards</h4>
+                <ul class="list-group">
+                    <li class="list-group-item cursor-p"
+                        *ngFor="let card of cards"
+                        [ngClass]="{'active': card.selected}"
+                        (click)="cardService.toggleCard(card)">
+                        {{ card.name }} | {{ card.apr }}%
+                    </li>
+                </ul>
+            </div>
+            <div class="col-8">
+                <div  *ngIf="userSelectedCards$ | async as cards; else noSelection">
+                    <div class="card-deck">
+                        <app-card-details *ngFor="let card of cards"
+                                          [card]="card"></app-card-details>
+                    </div>
+
+                    <div class="mt-2" *ngIf="cards.length > 1">
+                        Total credit available: {{ totalCredit(cards) | currency : '£' }}
+                    </div>
+                </div>
+                <ng-template #noSelection>
+                    No cards have been selected.
+                </ng-template>
+            </div>
+        </div>
+
+    </div>
+</div>
