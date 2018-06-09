@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve -o",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "mock-data": "node_modules/.bin/json-server json-server-data/mock-data.json"
+    "mock-api": "node_modules/.bin/json-server json-server-data/mock-data.json"
   },
   "private": true,
   "dependencies": {
